@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<vector<int>> subsets(vector<int>& nums, int start = 0, vector<int> processed = vector<int>()) {
+    vector<vector<int>> subsets(vector<int>& nums, int start = 0, vector<int> processed = {}) {
       
       cout << start << " ";
       if(nums.size() == start){
