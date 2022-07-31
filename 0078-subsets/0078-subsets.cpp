@@ -10,8 +10,8 @@ public:
       }
       vector<int>added(processed);
       added.push_back(nums[start]);
-      vector<vector<int>>vec1 = subsets( nums, start+1, added);
       vector<vector<int>>vec2 = subsets( nums, start+1, processed );
+      vector<vector<int>>vec1 = subsets( nums, start+1, added);
       vec1.insert( vec1.end(), vec2.begin(), vec2.end() );
       return vec1;
     }
