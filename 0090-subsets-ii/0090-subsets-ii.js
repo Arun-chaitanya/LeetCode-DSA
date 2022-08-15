@@ -4,8 +4,8 @@ var subsetsWithDup = function(nums) {
     if(numsArr.length === current){
     return [processed];
   }
-  let avoided = subFunc(numsArr, current+1, processed);
-  let included = subFunc(numsArr, current+1, [...processed,numsArr[current]]);
+  const avoided = subFunc(numsArr, current+1, processed);
+  const included = subFunc(numsArr, current+1, [...processed,numsArr[current]]);
   return [...(numsArr[current] !== processed[processed.length - 1] ? avoided : []), ...included];
   }
   return subFunc(nums)
